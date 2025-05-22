@@ -1,0 +1,289 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Account Settings
+    </title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ff5b00;
+            --bg-light: #f7f8fd;
+            --text-gray: #b4b4b4;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--bg-light);
+        }
+
+        .sidebar {
+            background-color: #fff;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .sidebar a {
+            color: var(--text-gray);
+        }
+
+        .sidebar a:hover {
+            color: var(--primary-color);
+        }
+
+        .sidebar .active {
+            color: var(--primary-color);
+        }
+
+        .main-content {
+            background-color: #fff;
+            border-left: 1px solid var(--border-color);
+        }
+
+        .main-content h2 {
+            color: var(--primary-color);
+        }
+
+        .main-content a {
+            color: var(--primary-color);
+        }
+    </style>
+    </link>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row min-vh-100">
+            <!-- Sidebar -->
+            <div class="col-12 col-md-3 sidebar p-4">
+                <div class="d-flex align-items-center mb-4">
+                    <img alt="User profile picture" class="rounded-circle mr-3" height="50"
+                        src="./boltoni-logo.png"
+                        width="50" />
+                    <div>
+                        <p class="font-weight-bold mb-0">
+                            Hello,
+                        </p>
+                        <p class="mb-0">
+                            Sandra Suresh
+                        </p>
+                    </div>
+                </div>
+                <nav>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a class="d-flex align-items-center" href="#">
+                                <i class="fas fa-box mr-2">
+                                </i>
+                                MY ORDERS
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="d-flex align-items-center" href="#">
+                                <i class="fas fa-cog mr-2">
+                                </i>
+                                ACCOUNT SETTINGS
+                            </a>
+                            <ul class="list-unstyled ml-4 mt-2">
+                                <li class="mb-2">
+                                    <a class="active" href="#">
+                                        Profile Information
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#">
+                                        Manage Addresses
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#">
+                                        PAN Card Information
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mb-2">
+                            <a class="d-flex align-items-center" href="#">
+                                <i class="fas fa-credit-card mr-2">
+                                </i>
+                                PAYMENTS
+                            </a>
+                            <ul class="list-unstyled ml-4 mt-2">
+                                <li class="mb-2">
+                                    <a href="#">
+                                        Gift Cards
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#">
+                                        Saved UPI
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#">
+                                        Saved Cards
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mb-2">
+                            <a class="d-flex align-items-center" href="#">
+                                <i class="fa-regular fa-heart"></i><i class="fas fa-tags mr-2">
+                                </i>
+                                Wishlist
+                            </a>
+                            <ul class="list-unstyled ml-4 mt-2">
+                                <li class="mb-2">
+                                    <a href="#">
+                                        My Coupons
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#">
+                                        My Reviews &amp; Ratings
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#">
+                                        All Notifications
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#">
+                                        My Wishlist
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mb-2">
+                            <a class="d-flex align-items-center" href="#">
+                                <i class="fas fa-sign-out-alt mr-2">
+                                </i>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="mt-4">
+                    <a class="d-block mb-2" href="#">
+                        Track Order
+                    </a>
+                    <a class="d-block" href="#">
+                        Help Center
+                    </a>
+                </div>
+            </div>
+            <!-- Main Content -->
+            <div class="col-12 col-md-9 main-content p-4">
+                <div class="mb-4">
+                    <h2 class="h5 font-weight-bold">
+                        Personal Information
+                    </h2>
+                    <a href="#">
+                        Edit
+                    </a>
+                </div>
+                <div class="mb-4">
+                    <div class="form-row mb-3">
+                        <div class="col">
+                            <input class="form-control" placeholder="Sandra" type="text" />
+                        </div>
+                        <div class="col">
+                            <input class="form-control" placeholder="Suresh" type="text" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <p class="mb-2">
+                            Your Gender
+                        </p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name="gender" type="radio" />
+                            <label class="form-check-label">
+                                Male
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name="gender" type="radio" />
+                            <label class="form-check-label">
+                                Female
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <h2 class="h5 font-weight-bold">
+                        Email Address
+                    </h2>
+                    <a href="#">
+                        Edit
+                    </a>
+                    <input class="form-control mt-2" type="email" />
+                </div>
+                <div class="mb-4">
+                    <h2 class="h5 font-weight-bold">
+                        Mobile Number
+                    </h2>
+                    <a href="#">
+                        Edit
+                    </a>
+                    <input class="form-control mt-2" type="text" value="+97395474769" />
+                </div>
+                <div>
+                    <h2 class="h5 font-weight-bold mb-3">
+                        FAQs
+                    </h2>
+                    <div class="mb-3">
+                        <p class="font-weight-bold">
+                            What happens when I update my email address (or mobile number)?
+                        </p>
+                        <p>
+                            Your login email id or mobile number changes, likewise. You'll receive all your account
+                            related communication on your updated email address (or mobile number).
+                        </p>
+                    </div>
+                    <div class="mb-3">
+                        <p class="font-weight-bold">
+                            When will my Flipkart account be updated with the new email address (or mobile number)?
+                        </p>
+                        <p>
+                            It happens as soon as you confirm the verification code sent to your email (or mobile) and
+                            save the changes.
+                        </p>
+                    </div>
+                    <div class="mb-3">
+                        <p class="font-weight-bold">
+                            What happens to my existing Flipkart account when I update my email address (or mobile
+                            number)?
+                        </p>
+                        <p>
+                            Updating your email address (or mobile number) doesn't invalidate your account. Your account
+                            remains fully functional. You'll continue to access your order history, saved items and
+                            personal details.
+                        </p>
+                    </div>
+                    <div class="mb-3">
+                        <p class="font-weight-bold">
+                            Does my Seller account get affected when I update my email address?
+                        </p>
+                        <p>
+                            Flipkart has a "single sign-on" policy. Any changes will reflect in your Seller account
+                            also.
+                        </p>
+                    </div>
+                    <div class="d-flex">
+                        <a class="mr-3" href="#">
+                            Deactivate Account
+                        </a>
+                        <a href="#">
+                            Delete Account
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

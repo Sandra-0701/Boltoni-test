@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boltoni Login Modal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            display: flex;
+            flex-direction: row;
+            background: linear-gradient(135deg, #2d1a3d, #1a1a1a);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            color: white;
+            overflow: hidden;
+        }
+
+        .modal-header {
+            border-bottom: none;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .btn-close-white {
+            filter: brightness(0) invert(1);
+        }
+
+        .login-image {
+            width: 40%;
+            background-image: url('https://via.placeholder.com/400');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .login-form {
+            width: 60%;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: white;
+            box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+        }
+
+        .form-check-label {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .login-btn {
+            background: linear-gradient(135deg, #8e44ad, #6c3483);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem;
+            width: 100%;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+        Open Login Modal
+    </button>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="login-image"></div> <!-- Left Image Section -->
+                <div class="login-form"> <!-- Right Form Section -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Login to Boltoni</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Email Address" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control" placeholder="Password" required>
+                            </div>
+                            <div class="mb-4 form-check">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                            </div>
+                            <button type="submit" class="login-btn">Sign In</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

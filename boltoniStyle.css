@@ -1,0 +1,242 @@
+.login-container {
+            background: url('./Boltoni-product-brochure.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            color: white;
+            font-family: 'Exo 2';
+        }
+
+        .logo {
+            max-width: 280px;
+            height: auto;
+        }
+
+        .feature-list,
+        .benefits-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .feature-list li,
+        .benefits-list li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .action-button {
+            border: 2px solid white;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .action-button:hover {
+            background: white;
+            color: black;
+        }
+
+        .button-group a {
+            display: inline-block;
+            width: 200px;
+            /* Set a fixed width */
+            text-align: center;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                text-align: center;
+            }
+
+            .button-group {
+                align-items: center;
+            }
+
+            .action-button {
+                width: 100%;
+                max-width: 300px;
+                margin: 0.5rem 0;
+            }
+        }
+
+        /* Request for modal */
+        #demoModal {
+            background: url('./Boltoni-product-brochure.png');
+            background-size: cover;
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #2d1a3d, #1a1a1a);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            color: white;
+            overflow: hidden;
+        }
+
+        .modal-header {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .modal-subtitle {
+            color: white;
+            font-size: 1rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-close-white {
+            filter: brightness(0) invert(1);
+        }
+
+        .form-control,
+        .form-select {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: white;
+            box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+        }
+
+        .form-control::placeholder,
+        .form-select::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-select option {
+            background-color: #2d1a3d;
+            color: white;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #8e44ad, #6c3483);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem;
+            width: 100%;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            transform: translateY(-2px);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 767.98px) {
+            .modal-content {
+                margin: 1rem;
+            }
+        }
+
+        /* Login Modal Styles */
+        #loginModal {
+            background: url('./Boltoni-product-brochure.png');
+            background-size: cover;
+
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #2d1a3d, #1a1a1a);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            color: white;
+            padding: 2rem;
+        }
+
+        .modal-header {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .btn-close-white {
+            filter: brightness(0) invert(1);
+        }
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: white;
+            box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-check-label {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .form-check-input {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .form-check-input:checked {
+            background-color: #8e44ad;
+            border-color: #8e44ad;
+        }
+
+        .login-btn {
+            background: linear-gradient(135deg, #8e44ad, #6c3483);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem;
+            width: 100%;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            transform: translateY(-2px);
+        }
+
+        .login-btn:active {
+            transform: translateY(0);
+        }

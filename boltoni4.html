@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boltoni - AI-Powered CRM & ERP</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background: url('./boltoni-logo.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            color: white;
+            font-family: 'Exo 2';
+        }
+
+        /* Styles for screens larger than 768px */
+        @media (min-width: 769px) {
+
+            html,
+            body {
+                overflow: hidden;
+            }
+
+            .container {
+                height: 100vh;
+                display: flex;
+                align-items: center;
+            }
+
+            .feature-list li {
+                font-size: 0.85rem;
+                margin-bottom: 8px;
+            }
+
+            .main-heading {
+                font-size: 2.2rem;
+            }
+
+            .features-container {
+                padding: 20px;
+            }
+        }
+
+        /* Styles for screens smaller than 768px */
+        @media (max-width: 768px) {
+            body {
+                overflow-y: auto;
+            }
+
+            .container {
+                padding: 20px;
+                margin-bottom: 40px;
+            }
+
+            .feature-list li {
+                font-size: 0.9rem;
+                margin-bottom: 12px;
+            }
+
+            .main-heading {
+                font-size: 1.8rem;
+            }
+
+            .features-container {
+                padding: 15px;
+            }
+
+            .bird-img {
+                position: relative !important;
+                width: 100% !important;
+                max-width: 300px !important;
+                margin: 20px auto;
+                display: block;
+                transform: none !important;
+                top: 0 !important;
+            }
+
+            .bird-section {
+                height: auto !important;
+            }
+
+            .erp-logo {
+                position: relative !important;
+                margin: 20px auto !important;
+                display: block;
+            }
+        }
+
+        .logo {
+            width: 280px;
+            margin-bottom: 10px;
+        }
+
+        .logo img {
+            width: 100%;
+        }
+
+        .bird-section {
+            position: relative;
+            height: 100vh;
+        }
+
+        .bird-img {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 350px;
+            z-index: 1;
+        }
+
+        .erp-logo {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            width: 80px;
+        }
+
+        .main-heading {
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .features-container {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            height: auto;
+        }
+
+        .btn-custom {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 6px 20px;
+            border-radius: 25px;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+
+        .btn-custom:hover {
+            background: white;
+            color: #000033;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 0;
+        }
+
+        .feature-list li {
+            line-height: 1.2;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .buttons {
+            margin-bottom: 20px;
+        }
+
+         /* Request for modal */
+        #demoModal {
+            background: url('./boltoni-logo.png');
+            background-size: cover;
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #2d1a3d, #1a1a1a);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            color: white;
+            overflow: hidden;
+        }
+
+        .modal-header {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .modal-subtitle {
+            color: white;
+            font-size: 1rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-close-white {
+            filter: brightness(0) invert(1);
+        }
+
+        .form-control,
+        .form-select {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: white;
+            box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+        }
+
+        .form-control::placeholder,
+        .form-select::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-select option {
+            background-color: #2d1a3d;
+            color: white;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #8e44ad, #6c3483);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem;
+            width: 100%;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            transform: translateY(-2px);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 767.98px) {
+            .modal-content {
+                margin: 1rem;
+            }
+        }
+
+        /* Login Modal Styles */
+        #loginModal {
+            background: url('./Boltoni-product-brochure.png');
+            background-size: cover;
+
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #2d1a3d, #1a1a1a);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            color: white;
+            padding: 2rem;
+        }
+
+        .modal-header {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .btn-close-white {
+            filter: brightness(0) invert(1);
+        }
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: white;
+            box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-check-label {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .form-check-input {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .form-check-input:checked {
+            background-color: #8e44ad;
+            border-color: #8e44ad;
+        }
+
+        .login-btn {
+            background: linear-gradient(135deg, #8e44ad, #6c3483);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem;
+            width: 100%;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            transform: translateY(-2px);
+        }
+
+        .login-btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row w-100">
+            <div class="col-lg-8">
+                <div class="logo">
+                    <img src="./boltoni logo-03.svg" alt="Boltoni Logo" />
+                </div>
+
+                <h1 class="main-heading">AI-Powered CRM & ERP<br>for Smarter Business Growth</h1>
+
+                <div class="buttons">
+                    <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>
+                    <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#demoModal">For Demo</button>
+                </div>
+
+                <div class="features-container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3>Core Features</h3>
+                            <ul class="feature-list">
+                                <li>Sales & Billing: Quotation, Invoice</li>
+                                <li>Marketing</li>
+                                <li>Projects</li>
+                                <li>Customer Support</li>
+                                <li>Lead Management</li>
+                                <li>HR & Payroll</li>
+                                <li>Predictive Analysis: Sales Forecasting, Budgeting</li>
+                                <li>Workflow Management: Assign Work</li>
+                                <li>Document & File Management</li>
+                                <li>Income & Expense Management</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h3>Key Benefits</h3>
+                            <ul class="feature-list">
+                                <li>Sales & Billing: Quotation, Invoice</li>
+                                <li>Marketing</li>
+                                <li>Projects</li>
+                                <li>Customer Support</li>
+                                <li>Lead Management</li>
+                                <li>HR & Payroll</li>
+                                <li>Predictive Analysis: Sales Forecasting, Budgeting</li>
+                                <li>Workflow Management: Assign Work</li>
+                                <li>Document & File Management</li>
+                                <li>Income & Expense Management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Request Demo Modal -->
+                <div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="demoModalLabel">Request Demo</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="row align-items-center">
+                                    <!-- Image Column -->
+                                    <div class="col-md-5 p-0 d-none d-md-block">
+                                        <img src="./Boltoni-login.png" class="img-fluid h-100 object-fit-cover" alt="Sample image"
+                                            style="border-top-left-radius: 15px; border-bottom-left-radius: 15px;">
+                                    </div>
+                
+                                    <!-- Form Column -->
+                                    <div class="col-md-7 p-4">
+                
+                                        <div class="modal-body">
+                                            <p class="modal-subtitle">Drop us your details we will get back to you soon!</p>
+                                            <form>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control" placeholder="Full Name*" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="email" class="form-control" placeholder="Email Address*" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="tel" class="form-control" placeholder="Phone Number*" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control" placeholder="Company Name*" required>
+                                                </div>
+                                                <div class="mb-4">
+                                                    <select class="form-select" required>
+                                                        <option value="" selected disabled>---Select Location*---</option>
+                                                        <option value="mumbai">Mumbai</option>
+                                                        <option value="kochi">Kochi</option>
+                                                        <option value="usa">USA</option>
+                                                        <option value="delhi">Delhi</option>
+                                                        <option value="kuwait">Kuwait</option>
+                                                        <option value="middle-east">Middle East</option>
+                                                        <option value="other">Other</option>
+                                                    </select>
+                                                </div>
+                                                <button type="submit" class="submit-btn">Submit Request</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- login modal -->
+                <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="loginModalLabel">Login to Boltoni</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">    
+                             
+                                <form action="{{ route('login') }}" method="POST">
+                      
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email"
+                                            value="" required autofocus autocomplete="email">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="password" placeholder="Enter your password"
+                                            name="password" required autocomplete="current-password">
+                                    </div>
+                                    <div class="mb-4 form-check">
+                                        <input type="checkbox" class="form-check-input" id="rememberMe" name="remember">
+                                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100 login-btn">Sign In</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
