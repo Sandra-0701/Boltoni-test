@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boltoni - AI-Powered CRM & ERP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Exo 2', sans-serif;
+      background: url('./boltoni-logo.png') center/cover no-repeat;
+      color: white;
+    }
+  </style>
+</head>
+
+<body class="h-full min-h-screen overflow-y-auto md:overflow-hidden">
+  <div class="container mx-auto flex h-screen items-center px-5 md:px-0">
+    <div class="w-full lg:w-2/3">
+      <!-- Logo -->
+      <div class="w-72 mb-3">
+        <img src="./boltoni logo-03.svg" alt="Boltoni Logo" class="w-full" />
+      </div>
+
+      <!-- Heading -->
+      <h1 class="font-bold leading-tight mb-5 text-[1.8rem] md:text-[2.2rem]">
+        AI-Powered CRM & ERP <br> for Smarter Business Growth
+      </h1>
+
+      <!-- Buttons -->
+      <div class="mb-5">
+        <button class="border-2 border-white text-white rounded-full px-6 py-2 mx-2 transition hover:bg-white hover:text-[#000033]"
+          data-bs-toggle="modal" data-bs-target="#loginModal">
+          Log In
+        </button>
+        <button class="border-2 border-white text-white rounded-full px-6 py-2 mx-2 transition hover:bg-white hover:text-[#000033]"
+          data-bs-toggle="modal" data-bs-target="#demoModal">
+          For Demo
+        </button>
+      </div>
+
+      <!-- Features -->
+      <div
+        class="backdrop-blur-md bg-black/10 rounded-2xl p-4 md:p-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <h3 class="text-lg mb-4 font-semibold">Core Features</h3>
+            <ul class="list-none space-y-2 text-sm md:text-[0.85rem] leading-snug">
+              <li>Sales & Billing: Quotation, Invoice</li>
+              <li>Marketing</li>
+              <li>Projects</li>
+              <li>Customer Support</li>
+              <li>Lead Management</li>
+              <li>HR & Payroll</li>
+              <li>Predictive Analysis: Sales Forecasting, Budgeting</li>
+              <li>Workflow Management: Assign Work</li>
+              <li>Document & File Management</li>
+              <li>Income & Expense Management</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg mb-4 font-semibold">Key Benefits</h3>
+            <ul class="list-none space-y-2 text-sm md:text-[0.85rem] leading-snug">
+              <li>Sales & Billing: Quotation, Invoice</li>
+              <li>Marketing</li>
+              <li>Projects</li>
+              <li>Customer Support</li>
+              <li>Lead Management</li>
+              <li>HR & Payroll</li>
+              <li>Predictive Analysis: Sales Forecasting, Budgeting</li>
+              <li>Workflow Management: Assign Work</li>
+              <li>Document & File Management</li>
+              <li>Income & Expense Management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Demo Modal -->
+  <div id="demoModal"
+    class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+    <div
+      class="bg-gradient-to-br from-[#2d1a3d] to-[#1a1a1a] text-white rounded-xl w-11/12 md:w-3/4 lg:w-2/3 shadow-lg overflow-hidden">
+      <div class="flex flex-col md:flex-row">
+        <!-- Image -->
+        <div class="hidden md:block w-2/5">
+          <img src="./Boltoni-login.png" alt="Sample image" class="h-full object-cover rounded-l-xl" />
+        </div>
+        <!-- Form -->
+        <div class="w-full md:w-3/5 p-6">
+          <h2 class="text-2xl font-bold mb-2">Request Demo</h2>
+          <p class="text-sm text-white/80 mb-4">Drop us your details we will get back to you soon!</p>
+          <form class="space-y-3">
+            <input type="text" placeholder="Full Name*" required
+              class="w-full rounded-md bg-white/10 border border-white/20 px-4 py-3 placeholder-white/60 focus:outline-none focus:border-white/40" />
+            <input type="email" placeholder="Email Address*" required
+              class="w-full rounded-md bg-white/10 border border-white/20 px-4 py-3 placeholder-white/60 focus:outline-none focus:border-white/40" />
+            <input type="tel" placeholder="Phone Number*" required
+              class="w-full rounded-md bg-white/10 border border-white/20 px-4 py-3 placeholder-white/60 focus:outline-none focus:border-white/40" />
+            <input type="text" placeholder="Company Name*" required
+              class="w-full rounded-md bg-white/10 border border-white/20 px-4 py-3 placeholder-white/60 focus:outline-none focus:border-white/40" />
+            <select required
+              class="w-full rounded-md bg-white/10 border border-white/20 px-4 py-3 text-white focus:outline-none">
+              <option value="" disabled selected>---Select Location*---</option>
+              <option value="mumbai">Mumbai</option>
+              <option value="kochi">Kochi</option>
+              <option value="usa">USA</option>
+              <option value="delhi">Delhi</option>
+              <option value="kuwait">Kuwait</option>
+              <option value="middle-east">Middle East</option>
+              <option value="other">Other</option>
+            </select>
+            <button type="submit"
+              class="w-full py-3 rounded-md bg-gradient-to-br from-purple-600 to-purple-800 font-medium transition hover:from-purple-500 hover:to-purple-700">
+              Submit Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="loginModal"
+    class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+    <div
+      class="bg-gradient-to-br from-[#2d1a3d] to-[#1a1a1a] text-white rounded-xl w-11/12 md:w-1/3 p-6 shadow-lg">
+      <h2 class="text-2xl font-bold mb-4">Login to Boltoni</h2>
+      <form class="space-y-3" action="{{ route('login') }}" method="POST">
+        <div>
+          <label for="email" class="block text-sm mb-1">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="name@example.com" required autofocus
+            autocomplete="email"
+            class="w-full rounded-md bg-white/10 border border-white/20 px-4 py-3 placeholder-white/60 focus:outline-none focus:border-white/40" />
+        </div>
+        <div>
+          <label for="password" class="block text-sm mb-1">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required
+            autocomplete="current-password"
+            class="w-full rounded-md bg-white/10 border border-white/20 px-4 py-3 placeholder-white/60 focus:outline-none focus:border-white/40" />
+        </div>
+        <div class="flex items-center gap-2">
+          <input type="checkbox" id="rememberMe" name="remember"
+            class="rounded bg-white/10 border border-white/30 checked:bg-purple-600" />
+          <label for="rememberMe" class="text-sm text-white/80">Remember me</label>
+        </div>
+        <button type="submit"
+          class="w-full py-3 rounded-md bg-gradient-to-br from-purple-600 to-purple-800 font-medium transition hover:from-purple-500 hover:to-purple-700">
+          Sign In
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JS for modal toggle -->
+  <script>
+    document.querySelectorAll("[data-bs-toggle='modal']").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-bs-target");
+        document.querySelector(target).classList.remove("hidden");
+      });
+    });
+    document.querySelectorAll(".modal").forEach(modal => {
+      modal.addEventListener("click", e => {
+        if (e.target === modal) modal.classList.add("hidden");
+      });
+    });
+  </script>
+</body>
+
+</html>

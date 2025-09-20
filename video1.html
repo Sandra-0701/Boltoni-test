@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boltoni - AI-Powered CRM & ERP | SSSteels Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3B82F6',
+            'primary-dark': '#2563EB'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Exo 2', sans-serif;
+    }
+    .boltoni-bg {
+      background: url('./boltoni-logo1.png') center/cover no-repeat;
+    }
+    .video-screen {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 50;
+      background: black;
+    }
+    .video-screen video {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="h-full min-h-screen">
+
+  <!-- Fullscreen Intro Video -->
+  <div id="video-screen" class="video-screen">
+    <video autoplay muted playsinline id="intro-video">
+      <source src="/videoBoltoni.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+  </div>
+
+  <!-- Main Page Content -->
+  <div id="main-content" class="hidden">
+    <div class="flex flex-col lg:flex-row h-screen">
+      
+      <!-- Left Side - Boltoni Landing -->
+      <div class="flex-1 boltoni-bg text-white overflow-y-auto">
+        <div class="container mx-auto flex h-full items-center px-5 md:px-8 py-8">
+          <div class="w-full">
+            <div class="w-72 mb-6">
+              <div class="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
+                <h1 class="text-2xl font-bold">BOLTONI</h1>
+                <p class="text-sm opacity-90">AI-Powered Solutions</p>
+              </div>
+            </div>
+            <h1 class="font-bold leading-tight mb-8 text-[1.8rem] md:text-[2.2rem]">
+              AI-Powered CRM & ERP <br> for Smarter Business Growth
+            </h1>
+            <div class="backdrop-blur-md bg-black/10 rounded-2xl p-4 md:p-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h3 class="text-lg mb-4 font-semibold">Core Features</h3>
+                  <ul class="list-none space-y-2 text-sm md:text-[0.85rem] leading-snug">
+                    <li>• Sales & Billing: Quotation, Invoice</li>
+                    <li>• Marketing</li>
+                    <li>• Projects</li>
+                    <li>• Customer Support</li>
+                    <li>• Lead Management</li>
+                    <li>• HR & Payroll</li>
+                    <li>• Predictive Analysis: Sales Forecasting, Budgeting</li>
+                    <li>• Workflow Management: Assign Work</li>
+                    <li>• Document & File Management</li>
+                    <li>• Income & Expense Management</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="text-lg mb-4 font-semibold">Key Benefits</h3>
+                  <ul class="list-none space-y-2 text-sm md:text-[0.85rem] leading-snug">
+                    <li>• Streamlined Operations</li>
+                    <li>• Enhanced Productivity</li>
+                    <li>• Data-Driven Insights</li>
+                    <li>• Automated Workflows</li>
+                    <li>• Real-time Reporting</li>
+                    <li>• Scalable Solutions</li>
+                    <li>• Cost Optimization</li>
+                    <li>• 24/7 Support</li>
+                    <li>• Cloud-Based Access</li>
+                    <li>• Integration Capabilities</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Side - SSSteels Login -->
+      <div class="flex-1 bg-gray-100">
+        <div class="flex items-center justify-center min-h-full px-4 py-8">
+          <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+            <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">SSSteels Login</h2>
+            <form action="" method="POST" class="space-y-6">
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" name="email" id="email" required 
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm 
+                         focus:outline-none focus:ring-primary focus:border-primary transition-colors"
+                  placeholder="Enter your email">
+              </div>
+              <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" name="password" id="password" required 
+                  class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm 
+                         focus:outline-none focus:ring-primary focus:border-primary transition-colors"
+                  placeholder="Enter your password">
+              </div>
+              <div class="flex items-center justify-between text-sm">
+                <label class="flex items-center">
+                  <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary">
+                  <span class="ml-2 text-gray-600">Remember me</span>
+                </label>
+                <a href="#" class="text-primary hover:text-primary-dark transition-colors">Forgot password?</a>
+              </div>
+              <div>
+                <button type="submit" 
+                  class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-primary-dark 
+                         focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary 
+                         transition-colors font-medium">
+                  Login
+                </button>
+              </div>
+              <div class="text-center text-sm text-gray-600">
+                Don't have an account? 
+                <a href="#" class="text-primary hover:text-primary-dark transition-colors font-medium">Sign up</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <script>
+    const video = document.getElementById('intro-video');
+    const videoScreen = document.getElementById('video-screen');
+    const mainContent = document.getElementById('main-content');
+
+    video.addEventListener('ended', () => {
+      videoScreen.style.display = 'none';
+      mainContent.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
